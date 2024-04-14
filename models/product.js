@@ -12,10 +12,11 @@ const productSchema = mongoose.Schema({
     },
     category: {
         type: String,
+        lowercase: true,
         enum: ["fruit", "vegetable", "dairy"]
     }
 })
 
 const Product = mongoose.model("Product", productSchema);
 
-module.exports = Products; // to export it to somewhere else
+module.exports = Product; // to export it to somewhere else

@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
 
-mongoose.connect("mongodb://127.0.0.1:27017/testt")
+const Product = require("./models/product");
+
+mongoose.connect("mongodb://127.0.0.1:27017/farmStand")
     .then(() => {
         console.log("Mongo Connection Open!!!");
     })
