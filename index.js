@@ -42,6 +42,11 @@ app.get("/products/:id", async (req, res) => {
     res.render("products/show", { product });
 })
 
+app.get("/products/:id/edit", async (req, res) => {
+    const product = await Product.findById(id);
+    res.render("products/edit", { product });
+})
+
 app.listen(port, () => {
     console.log(`App is listening on port ${port}`);
 })
